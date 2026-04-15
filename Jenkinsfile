@@ -1,15 +1,20 @@
 pipeline {
-    agent any
+    agent any 
+
     stages {
-        stage('Environment Check') {
+        stage('Build') {
             steps {
-                echo 'Checking Python version...'
-                sh 'python --version' 
+                echo 'Build Stage Running'
             }
         }
-        stage('Install Dependencies') {
+        stage('Test') {
             steps {
-                echo 'This is where you would run: pip install pandas scikit-learn'
+                echo 'Test Stage Running'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy Stage Running'
             }
         }
     }
