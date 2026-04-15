@@ -4,12 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build stage running'
+                echo 'Checking Build System...'
             }
         }
-        stage('Test') {
+        stage('Python Test') {
             steps {
-                echo 'Test stage running'
+                echo 'Testing Environment...'
+                sh 'python3 --version || python --version'
             }
         }
     }
